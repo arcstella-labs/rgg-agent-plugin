@@ -1,0 +1,26 @@
+{
+  "name": "retro-game-gather",
+  "displayName": "Retro Game Gather",
+  "version": "2.2.0",
+  "description": "Connect to Retro Game Gather to look up Japanese retro games and manage your wishlist, library, play records and collection goals.",
+  "author": {
+    "name": "Arcstella Co., Ltd.",
+    "url": "https://retrogather.com/"
+  },
+  "homepage": "https://docs.retrogather.com/",
+  "keywords": [
+    "retro-game-gather",
+    "retro games",
+    "Japanese games",
+    "game collection",
+    "backlog",
+    "レトロゲーム",
+    "ゲーム管理",
+    "コレクション",
+    "積みゲー",
+    "プレイ記録"
+  ],
+  "mcpServers": "./.mcp.json",
+  "repository": "https://github.com/arcstella-labs/rgg-agent-plugin",
+  "license": "MIT"
+}

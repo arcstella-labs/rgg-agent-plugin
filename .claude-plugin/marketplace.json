@@ -1,0 +1,15 @@
+{
+  "name": "rgg-agent-plugin",
+  "description": "Japanese retro game collection",
+  "owner": {
+    "name": "Arcstella Co., Ltd.",
+    "url": "https://retrogather.com/"
+  },
+  "plugins": [
+    {
+      "name": "retro-game-gather",
+      "source": "./",
+      "description": "Connect to Retro Game Gather to look up Japanese retro games and manage your wishlist, library, play records and collection goals."
+    }
+  ]
+}
