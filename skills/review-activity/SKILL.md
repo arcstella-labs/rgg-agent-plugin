@@ -27,7 +27,7 @@ Request only the sections you need.
 - Play time and clears are different measures. `monthlyResults` gives clears and drops per month; it has no minutes. Minutes played come from `playTimeTrend` (from play logs).
 - `playTimeTrend` covers at most 90 days per call; `playTimeTrendGranularity: "month"` changes the grouping, not that limit. For a longer period, split it into ranges of 90 days or less that do not overlap, keep the other filters the same, and add up the minutes RGG returns. If that needs many calls, agree on the period with the user first.
 - With `playTimeTrendGranularity` `week` or `month`, each point has `from` / `to` (YYYY-MM-DD, JST, inclusive): the first and last days counted in that point. Weeks are ISO weeks starting on Monday, and `period` stays `YYYY-Www`. The first and last points are cut to `playTimeTrendFrom` / `playTimeTrendTo` (a range starting on a Thursday gives a first week that starts on that Thursday), and `minutes` covers only `from`–`to`. Quote these dates instead of working them out from `period`. `day` points have no `from` / `to`, since `period` is the date.
-- By default the analytics use each game's latest record. On PREMIUM, pass `includeHistory: true` to include earlier cycles (for example a game cleared this year and now being replayed). If you use latest records only, say so in the answer.
+- By default the analytics use each game's latest record. On PREMIUM, set `includeHistory: true` to include earlier cycles (for example a game cleared this year and now being replayed). If you use latest records only, say so in the answer.
 - Report play time in the unit returned (minutes), converting to hours only for display.
 - State the period and filters you used ("2026年1月1日〜9月30日、全プラットフォーム").
 - Dates are Japan time.

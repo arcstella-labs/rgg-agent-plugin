@@ -22,5 +22,6 @@
   ],
   "mcpServers": "./.mcp.json",
   "repository": "https://github.com/arcstella-labs/rgg-agent-plugin",
-  "license": "MIT"
+  "license": "MIT",
+  "privacyPolicyUrl": "https://retrogather.com/privacy/"
 }

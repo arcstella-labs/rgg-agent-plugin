@@ -12,7 +12,7 @@ For RGG concepts see `references/service-guide.md`; for Japanese terms see `refe
 ## Identify the game
 
 1. Pick the identifier the user gave: title or nickname → `query`; barcode number → `janCode`; package or disc code → `modelNumber`.
-2. If the user named a platform ("SFC版", "PS版"), resolve it with listPlatforms and pass `platformIds`.
+2. If the user named a platform ("SFC版", "PS版"), resolve it with listPlatforms and set `platformIds`.
 3. Read the candidates. Numbered sequels, ports, remakes and compilations often match together. Choose from title, platform and release date. Ask only when the choice changes the answer, and ask with the short list, not an open question.
 4. A match on `alias` is a reading or nickname, not the official title. Say which game you took it to be.
 5. A match with `edition: true` came from a バージョン違い (e.g. a budget re-release). The result is the parent game. RGG does not know which edition the user owns unless they record it as a physical copy (PREMIUM).

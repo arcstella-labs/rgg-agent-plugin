@@ -28,7 +28,7 @@ For RGG concepts see `references/service-guide.md`; for Japanese terms see `refe
 The app's clear log (クリアログ) is a play log plus the status change and a rating. Through the tools it takes two steps:
 
 1. addPlayLog with the final session's minutes and the user's impressions.
-2. updatePlayRecord with `status: "COMPLETED"` and `rating` (1–5) if the user gave one. The end date defaults to today; pass `playEndDate` if they cleared on another day (see "Past dates").
+2. updatePlayRecord with `status: "COMPLETED"` and `rating` (1–5) if the user gave one. The end date defaults to today. If they cleared on another day, set `playEndDate` (see "Past dates").
 
 Ask for a rating once if they did not give one. Leave it empty if they prefer.
 
