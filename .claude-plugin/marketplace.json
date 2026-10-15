@@ -2,7 +2,7 @@
   "name": "rgg-agent-plugin",
   "description": "Japanese retro game collection",
   "owner": {
-    "name": "Arcstella Co., Ltd.",
+    "name": "Arcstella Inc.",
     "url": "https://retrogather.com/"
   },
   "plugins": [

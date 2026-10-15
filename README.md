@@ -6,6 +6,8 @@
 
 This plugin connects Claude to your RGG account and adds six skills, so you can look up games and keep your wishlist, library and play records up to date by talking in your own words, in Japanese or English.
 
+The same plugin also works in Cursor and Grok Bot. Where this page says Claude, read it as the AI tool you use.
+
 ## What you can ask
 
 | Skill                 | Use it to                                                                                             | Example                                          |
@@ -28,7 +30,7 @@ Claude replies in the language you write in and quotes official titles in Japane
 ## Requirements
 
 - A Retro Game Gather account. See [Sign up and log in](https://docs.retrogather.com/getting-started/signup/) (in Japanese).
-- A Claude plan that supports plugins.
+- A Claude plan that supports plugins, or Cursor or Grok Bot.
 
 Tags, owned consoles, collection goals, multiple copies of one game, custom entries and browsing by platform or genre depend on your RGG plan. When a feature is not available, Claude says so once and carries on.
 
@@ -43,9 +45,11 @@ claude plugin marketplace add arcstella-labs/rgg-agent-plugin
 claude plugin install retro-game-gather@rgg-agent-plugin
 ```
 
+**Cursor and Grok Bot**: find **Retro Game Gather** in the Marketplace (Cursor: **Settings > Plugins**) and add it. Grok Bot uses the same plugin as Cursor.
+
 ## Connect your account
 
-After adding the plugin, connect **Retro Game Gather** from the plugin's Connectors tab. Your browser opens RGG's consent screen, where you sign in and choose what Claude may do.
+After adding the plugin, connect **Retro Game Gather** from the plugin's Connectors tab (Cursor: the `retro-game-gather` server under **Settings > Tools & MCP**; Grok Bot: its MCP settings). Your browser opens RGG's consent screen, where you sign in and choose what Claude may do.
 
 - Permissions are grouped into game information, library and play records, each with view, edit and delete.
 - Delete is off by default. Unless you turn it on, Claude cannot delete anything.
@@ -56,7 +60,7 @@ If you already use the Retro Game Gather connector, the plugin uses the same con
 ## What this plugin contains and what it accesses
 
 - **Six skills.** Each is a Markdown file of instructions with reference notes about RGG's terms and data. The plugin has no hooks, commands, agents, scripts or executables, and runs nothing on your computer.
-- **One remote MCP server**, `https://game.retrogather.com/mcp`, operated by Arcstella Co., Ltd., which is the same server as the Retro Game Gather connector. You sign in with OAuth. Claude sends tool calls to this server, for example a search term or a record to add, and receives your RGG data within the permissions you granted. The plugin sends nothing to any other service.
+- **One remote MCP server**, `https://game.retrogather.com/mcp`, operated by Arcstella Inc., which is the same server as the Retro Game Gather connector. You sign in with OAuth. Claude sends tool calls to this server, for example a search term or a record to add, and receives your RGG data within the permissions you granted. The plugin sends nothing to any other service.
 - **Changes to your data.** When you ask, Claude adds or updates records in your RGG account, such as wishlist entries, library entries and play logs. Deleting needs the delete permission and a confirmation step.
 - **Reference links.** When you ask for an introduction to a game, the `find-games` skill tells Claude to open the reference links RGG returns for that game, such as Wikipedia, fan wikis, the Media Arts Database, the Game Preservation Society, IGDB and PULSE, with Claude's own web tools, and to cite the pages it read. If Claude cannot open them, it says so.
 - **Documentation links.** For things only the RGG app can do, the skills point you to pages on [docs.retrogather.com](https://docs.retrogather.com/).
@@ -73,7 +77,7 @@ If you already use the Retro Game Gather connector, the plugin uses the same con
 - [Support](https://docs.retrogather.com/features/support/)
 - [Documentation](https://docs.retrogather.com/), including [what to ask AI tools](https://docs.retrogather.com/guides/ai-examples/)
 
-RGG data that Claude receives is handled under Anthropic's terms for the Claude product you use.
+RGG data that Claude receives is handled under Anthropic's terms for the Claude product you use. In Cursor and Grok Bot, it is handled under the terms of those products.
 
 This repository is generated from Arcstella's source for the plugin. Please send questions and feedback through the support page rather than pull requests.
 
@@ -89,6 +93,8 @@ The files in this repository are released under the [MIT License](LICENSE). The 
 
 このプラグインは、Claude と RGG のアカウントを連携し、6 本のスキルを追加します。会話の中で、ゲームを調べたり、ウィッシュリスト・マイライブラリ・プレイ記録を更新したりできます。
 
+同じプラグインを Cursor と Grok Bot でも使えます。このページの「Claude」は、使っている AI ツールに読み替えてください。
+
 ### 頼めること
 
 | スキル                | できること                                                                         | 依頼の例                                         |
@@ -103,7 +109,7 @@ The files in this repository are released under the [MIT License](LICENSE). The 
 ### 必要なもの
 
 - Retro Game Gather のアカウント（[アカウント登録とログイン](https://docs.retrogather.com/getting-started/signup/)）
-- プラグインを使える Claude のプラン
+- プラグインを使える Claude のプラン、または Cursor・Grok Bot
 
 ゲームタグ、ゲーム機、マイコレクション、所有ソフト、カスタムデータ、機種やジャンルでの絞り込みは、RGG のプランによって使える範囲が変わります。
 
@@ -111,12 +117,13 @@ The files in this repository are released under the [MIT License](LICENSE). The 
 
 - **Claude（Web・デスクトップアプリ）**: 「カスタマイズ」→「プラグイン」を開き、一覧から Retro Game Gather を追加します。追加したプラグインはモバイルアプリでも使えます
 - **Claude Code**: 上の Install のコマンドで、このリポジトリをマーケットプレイスとして追加します
+- **Cursor・Grok Bot**: マーケットプレイス（Cursor は「Settings」→「Plugins」）で Retro Game Gather を探して追加します。Grok Bot は Cursor と同じプラグインを使います
 
 手順の詳細は「[AIツールと連携する](https://docs.retrogather.com/guides/connect-ai/)」を参照してください。
 
 ### 連携と許可
 
-プラグインを追加したら、プラグインの「コネクタ」タブから Retro Game Gather を連携します。ブラウザで RGG の許可画面が開くので、ログインして許可する内容を選びます。
+プラグインを追加したら、プラグインの「コネクタ」タブから Retro Game Gather を連携します（Cursor は「Settings」→「Tools & MCP」の `retro-game-gather`、Grok Bot は MCP の設定）。ブラウザで RGG の許可画面が開くので、ログインして許可する内容を選びます。
 
 - 許可は「ゲーム情報」「ライブラリ」「プレイ記録」の区分と、「閲覧」「編集」「削除」の操作で選びます
 - 削除は初期状態でオフです。オンにしない限り、Claude から削除の操作はできません
